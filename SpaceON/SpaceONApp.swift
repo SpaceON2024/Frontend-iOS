@@ -11,6 +11,7 @@ import KakaoSDKAuth
 
 @main
 struct TestApp: App {
+    @StateObject private var userManager = UserManager()
     
     init() {
         // Kakao SDK 초기화
@@ -19,7 +20,9 @@ struct TestApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView().onOpenURL(perform: { url in
+            ContentView()
+                .environmentObject(userManager)  // UserManager를 환경 객체로 설정
+                .onOpenURL(perform: { url in
                 if (AuthApi.isKakaoTalkLoginUrl(url)) {
                     AuthController.handleOpenUrl(url: url)
                 }
