@@ -11,7 +11,7 @@ struct MyInfoView: View {
         NavigationView {
             VStack {
                 if userManager.isLoggedIn, let userInfo = userManager.userInfo {
-                    Text("Hello, \(userInfo.name)!")
+                    Text("Hello, \(userInfo.nickname)!")
                         .font(.largeTitle)
                 } else {
                     HStack {
