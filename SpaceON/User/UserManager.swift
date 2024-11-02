@@ -67,7 +67,7 @@ class UserManager: ObservableObject {
                                     tokens: userData.tokens,
                                     profileImage: userData.profileImage
                                 )
-                                //print(self.userInfo) // 로그인 정보 출력
+                                print(self.userInfo) // 로그인 정보 출력
                                 //self.accessToken = userData.tokens.accessToken
                                 //self.refreshToken = userData.tokens.refreshToken
                             }

@@ -14,7 +14,7 @@ struct ContentView: View {
                         Text("홈")
                     }
                 
-                EditGroupView()
+                GroupView()
                     .tabItem {
                         Image(systemName: "plusminus.circle.fill")
                         Text("그룹 관리")
